@@ -1,0 +1,21 @@
+(gdb) frame 3
+#3  0x000055555555577d in main (argc=2, args=0x7fffffffe838) at good-life.c:143
+143                   printf("%s", life[row][col]);
+(gdb) list
+138
+139           for(row = 0; row<20; row++)
+140           {
+141               for(col = 0; col<20; col++)
+142               {
+143                   printf("%s", life[row][col]);
+144               }
+145               puts(" ");
+146           }
+147
+(gdb) delete breakpoint 1
+(gdb) break good-life.c:143
+Breakpoint 2 at 0x55555555573b: file good-life.c, line 143.
+(gdb) info break
+Num     Type           Disp Enb Address            What
+2       breakpoint     keep y   0x000055555555573b in main at good-life.c:143
+(gdb)
