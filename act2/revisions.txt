@@ -1,3 +1,15 @@
+commit eaf789919cd28c4c2be57d3dfe7288e2dd5a2aac
+Author: Olivier Charles Couthaud <occ4548@rit.edu>
+Date:   Fri Sep 19 21:54:00 2025 -0400
+
+    fixed good life.c print order
+
+commit 2175002a2dee1155d026c8da11e1be40adeafe09
+Author: Olivier Charles Couthaud <occ4548@rit.edu>
+Date:   Fri Sep 19 21:39:35 2025 -0400
+
+    added revisions.txt
+
 commit 23a318926307a68e6f2779598482e93bc21e5f5f
 Author: Olivier Charles Couthaud <occ4548@rit.edu>
 Date:   Fri Sep 19 21:39:03 2025 -0400
