@@ -237,7 +237,7 @@ int main(int argc, char *args[])
       while ( count < MAX_GENERATIONS ) { // fix 5: stop after 50 generations
           // birthRule(life); // fix 7: removed arguments to match function signature
           // survivalRule(life); // fix 7: removed arguments to match function signature
-          apply_rules(GRID_SIZE, life); // fix 12: use merged function with grid copy // fix 16: pass size parameter
+          printf("\ngeneration: %d\n", count);
           for(row = 0; row<GRID_SIZE; row++)
           {
               for(col = 0; col<GRID_SIZE; col++)
@@ -246,7 +246,7 @@ int main(int argc, char *args[])
               }
               puts(" ");
           }
-          printf("\ngeneration: %d\n", count);
+          apply_rules(GRID_SIZE, life); // fix 12: use merged function with grid copy // fix 16: pass size parameter
           count++;
       }
 
