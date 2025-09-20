@@ -30,12 +30,18 @@ Description: Homework 3 file
 #include <stdio.h>
 #include <stdlib.h>
 
+#define GRID_SIZE 20  // fix 15: replaced magic number with constant
+#define MAX_GENERATIONS 50  // fix 15: replaced magic number with constant
+
+/**
+ * Displays welcome header for the game
+ */
 void header(void)
 {
       printf("\n\t..Welcome to the Game of life..\n");
 }
 
-/* fix 12: commented out old separate rule functions (replaced with applyRules
+/* fix 12: commented out old separate rule functions (replaced with apply_rules
 void survivalRule(char life[][20]) // fix 4: removed unused parameters
 {
       int row, col;
@@ -45,7 +51,7 @@ void survivalRule(char life[][20]) // fix 4: removed unused parameters
          {
             if(life[row][col]== '*') // fix 3: removed & and changed string to char comparison
             {
-               int neighbors =; // fix 10: the neighbors variable is never reset to 0 for each cell
+               int neighbors = 0; // fix 10: the neighbors variable is never reset to 0 for each cell
                if(life[row - 1][col - 1] == '*')
                   ++neighbors;
                if(life[row - 1][col] == '*')
@@ -68,7 +74,7 @@ void survivalRule(char life[][20]) // fix 4: removed unused parameters
                }
                else
                {
-                   life[row][col] = ' ' // fix 11: added death condition for cells with wrong neighbor count
+                   life[row][col] = ' '; // fix 11: added death condition for cells with wrong neighbor count
                }
             }
          }
@@ -113,19 +119,24 @@ void birthRule(char life[][20]) // fix 4: removed unused parameters
 }
 */
 
-void applyRules(char life[][20]) // fix 12: merged rules and added grid copy to prevent concurrent modification
+/**
+ * Applies Conway's Game of Life rules to update the grid
+ * @param size The dimensions of the square grid
+ * @param life The grid containing current cell states
+ */
+void apply_rules(int size, char life[][size]) // fix 12: merged rules and added grid copy to prevent concurrent modification // fix 14: changed camelCase to snake_case // fix 16: proper C array parameter syntax
 {
-    char copy[20][20];
+    char copy[GRID_SIZE][GRID_SIZE];
     int row, col;
 
-    for(row = 0; row < 20; row++) {
-        for(col = 0; col < 20; col++) {
+    for(row = 0; row < GRID_SIZE; row++) {
+        for(col = 0; col < GRID_SIZE; col++) {
             copy[row][col] = life[row][col];
         }
     }
 
-    for(row = 0; row < 20; row++) { // fix 13: process all cells including edges
-        for(col = 0; col < 20; col++) { // fix 13: process all cells including edges
+    for(row = 0; row < GRID_SIZE; row++) { // fix 13: process all cells including edges
+        for(col = 0; col < GRID_SIZE; col++) { // fix 13: process all cells including edges
             int neighbors = 0;
 
             /*
@@ -142,8 +153,8 @@ void applyRules(char life[][20]) // fix 12: merged rules and added grid copy to 
             for(int dr = -1; dr <= 1; dr++) {
                 for(int dc = -1; dc <= 1; dc++) {
                     if(dr == 0 && dc == 0) continue;
-                    r = (row + dr + 20) % 20;  // fix 13: wraparound for rows
-                    c = (col + dc + 20) % 20;  // fix 13: wraparound for columns
+                    r = (row + dr + GRID_SIZE) % GRID_SIZE;  // fix 13: wraparound for rows
+                    c = (col + dc + GRID_SIZE) % GRID_SIZE;  // fix 13: wraparound for columns
                     if(copy[r][c] == '*') {
                         neighbors++;
                     }
@@ -169,9 +180,15 @@ void applyRules(char life[][20]) // fix 12: merged rules and added grid copy to 
     }
 }
 
+/**
+ * Main function: implements Conway's Game of Life
+ * @param argc Number of command line arguments
+ * @param args Array of command line arguments
+ * @return 0 on success, 1 on error
+ */
 int main(int argc, char *args[])
 {
-      char life[20][20];
+      char life[GRID_SIZE][GRID_SIZE];
       int orgs;
       int i, row, col;
       int count = 0;
@@ -189,9 +206,9 @@ int main(int argc, char *args[])
       for(i = 0; i<orgs; i++)
       {
           row = rand();
-          row %= 20;
+          row %= GRID_SIZE;
           col = rand();
-          col %= 20;
+          col %= GRID_SIZE;
           if (life[row][col] != '*') {
               life[row][col] = '*'; // fix 2: changed == to = for assignment
           } else {
@@ -199,31 +216,31 @@ int main(int argc, char *args[])
           } // fix 9: added collision detection to avoid overwriting organisms
       }
 
-      for(row = 0; row<20; row++)
+      for(row = 0; row<GRID_SIZE; row++)
       {
-          for(col = 0; col<20; col++)
+          for(col = 0; col<GRID_SIZE; col++)
           {
               if(life[row][col] != '*')
                   life[row][col] = ' '; // fix 2: changed == to = for assignment
           }
       }
 
-      for(row = 0; row<20; row++)
+      for(row = 0; row<GRID_SIZE; row++)
       {
-          for(col = 0; col<20; col++)
+          for(col = 0; col<GRID_SIZE; col++)
           {
               printf("%c", life[row][col]); // fix 1: changed %s to %c for character output
           }
           puts(" ");
       }
 
-      while ( count < 50 ) { // fix 5: stop after 50 generations
+      while ( count < MAX_GENERATIONS ) { // fix 5: stop after 50 generations
           // birthRule(life); // fix 7: removed arguments to match function signature
           // survivalRule(life); // fix 7: removed arguments to match function signature
-          applyRules(life); // fix 12: use merged function with grid copy
-          for(row = 0; row<20; row++)
+          apply_rules(GRID_SIZE, life); // fix 12: use merged function with grid copy // fix 16: pass size parameter
+          for(row = 0; row<GRID_SIZE; row++)
           {
-              for(col = 0; col<20; col++)
+              for(col = 0; col<GRID_SIZE; col++)
               {
                   printf("%c", life[row][col]); // fix 1: changed %s to %c for character output
               }
