@@ -1,0 +1,46 @@
+(gdb) break 142
+Breakpoint 1 at 0x1742: file good-life.c, line 142.
+(gdb) run 123
+Starting program: /home/stu13/s7/occ4548/Courses/CSCI243/Homeworks/hw3/act1/good-life 123
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+        ..Welcome to the Game of life..
+
+Breakpoint 1, main (argc=2, args=0x7fffffffe8a8) at good-life.c:142
+142               for(col = 0; col<20; col++)
+(gdb) display row
+1: row = 0
+(gdb) display col
+2: col = 20
+(gdb) display life[row][col]
+3: life[row][col] = 0 '\000'
+(gdb) continue 19
+Will ignore next 18 crossings of breakpoint 1.  Continuing.
+
+
+
+
+
+
+v/I���
+���������
+����������
+O
+��������h�����
+
+
+
+
+
+
+
+
+
+Breakpoint 1, main (argc=2, args=0x7fffffffe8a8) at good-life.c:142
+142               for(col = 0; col<20; col++)
+1: row = 19
+2: col = 20
+3: life[row][col] = 0 '\000'
+
+The error was using == (comparison) instead of = (assignment). This prevented the life grid from being properly initialized with '*' and ' ' characters, causing garbage output.

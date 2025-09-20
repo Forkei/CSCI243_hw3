@@ -35,7 +35,7 @@ void header(void)
       printf("\n\t..Welcome to the Game of life..\n");
 }
 
-void survivalRule(char life[][20], int x, int y)
+void survivalRule(char life[][20]) // fix 4: removed unused parameters
 {
       int row, col;
       int neighbors = 0;
@@ -43,7 +43,7 @@ void survivalRule(char life[][20], int x, int y)
       {
          for(col = 1; col<19; col++)
          {
-            if(&life[row][col]== "*")
+            if(life[row][col]== '*') // fix 3: removed & and changed string to char comparison
             {
                if(life[row - 1][col - 1] == '*')
                   ++neighbors;
@@ -71,7 +71,7 @@ void survivalRule(char life[][20], int x, int y)
       return;
 }
 
-void birthRule(char life[][20], int x, int y)
+void birthRule(char life[][20]) // fix 4: removed unused parameters
 {
       int row, col;
       int neighbors = 0;
@@ -79,7 +79,7 @@ void birthRule(char life[][20], int x, int y)
       {
          for(col = 1; col<19; col++)
          {
-            if(&life[row][col]== " ")
+            if(life[row][col]== ' ') // fix 3: removed & and changed string to char comparison
             {
                if(life[row - 1][col - 1] == '*')
                   neighbors++;
@@ -111,12 +111,12 @@ void birthRule(char life[][20], int x, int y)
 int main(int argc, char *args[])
 {
       char life[20][20];
-      int orgs, gens;
-      int i, a, b, row, col;
+      int orgs;
+      int i, row, col;
       int count = 0;
-      int x = 19;
-      int y = 19;
-      char ans;
+//       int x = 19; // fix 8: removed unused variables x and y
+//       int y = 19;
+      // fix 4.2: removed unused variables
       if (argc != 2) { return 1; }
       header();
 
@@ -152,9 +152,9 @@ int main(int argc, char *args[])
           puts(" ");
       }
 
-      while ( 1 ) {
-          birthRule(life, x, y);
-          survivalRule(life, x, y);
+      while ( count < 50 ) { // fix 5: stop after 50 generations
+          birthRule(life); // fix 7: removed arguments to match function signature
+          survivalRule(life); // fix 7: removed arguments to match function signature
           for(row = 0; row<20; row++)
           {
               for(col = 0; col<20; col++)

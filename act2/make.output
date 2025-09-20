@@ -1,0 +1,35 @@
+gcc -std=c99 -ggdb -Wall -Wextra -pedantic  -c good-life.c
+good-life.c: In function ‘survivalRule’:
+good-life.c:46:31: warning: comparison with string literal results in unspecified behavior [-Waddress]
+   46 |             if(&life[row][col]== "*")
+      |                               ^~
+good-life.c:38:40: warning: unused parameter ‘x’ [-Wunused-parameter]
+   38 | void survivalRule(char life[][20], int x, int y)
+      |                                    ~~~~^
+good-life.c:38:47: warning: unused parameter ‘y’ [-Wunused-parameter]
+   38 | void survivalRule(char life[][20], int x, int y)
+      |                                           ~~~~^
+good-life.c: In function ‘birthRule’:
+good-life.c:82:31: warning: comparison with string literal results in unspecified behavior [-Waddress]
+   82 |             if(&life[row][col]== " ")
+      |                               ^~
+good-life.c:74:37: warning: unused parameter ‘x’ [-Wunused-parameter]
+   74 | void birthRule(char life[][20], int x, int y)
+      |                                 ~~~~^
+good-life.c:74:44: warning: unused parameter ‘y’ [-Wunused-parameter]
+   74 | void birthRule(char life[][20], int x, int y)
+      |                                        ~~~~^
+good-life.c: In function ‘main’:
+good-life.c:119:12: warning: unused variable ‘ans’ [-Wunused-variable]
+  119 |       char ans;
+      |            ^~~
+good-life.c:115:17: warning: unused variable ‘b’ [-Wunused-variable]
+  115 |       int i, a, b, row, col;
+      |                 ^
+good-life.c:115:14: warning: unused variable ‘a’ [-Wunused-variable]
+  115 |       int i, a, b, row, col;
+      |              ^
+good-life.c:114:17: warning: unused variable ‘gens’ [-Wunused-variable]
+  114 |       int orgs, gens;
+      |                 ^~~~
+gcc -std=c99 -ggdb -Wall -Wextra -pedantic -o good-life good-life.o  -lm 
