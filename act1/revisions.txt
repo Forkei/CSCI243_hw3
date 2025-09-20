@@ -1,0 +1,23 @@
+commit 05dcad836646340cbee05d10995900ba2f8c4d36
+Author: Olivier Charles Couthaud <occ4548@rit.edu>
+Date:   Fri Sep 19 20:14:30 2025 -0400
+
+    Finished activity 1 and started activity 2
+
+commit 2abfcf09531ab6b6fc4276b1a30c8b5f97409da3
+Author: Olivier Charles Couthaud <occ4548@rit.edu>
+Date:   Thu Sep 18 23:06:57 2025 -0400
+
+    fix 1
+
+commit 631cb850669d1c469ca622b928006638e2857292
+Author: Olivier Charles Couthaud <occ4548@rit.edu>
+Date:   Thu Sep 18 22:24:24 2025 -0400
+
+    Initial baseline commit of supplied files
+
+commit efba4369439c049616319f79b969010e62c8accd
+Author: Olivier Charles Couthaud <occ4548@rit.edu>
+Date:   Thu Sep 18 22:20:25 2025 -0400
+
+    first commit
