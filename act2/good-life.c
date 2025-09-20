@@ -35,16 +35,17 @@ void header(void)
       printf("\n\t..Welcome to the Game of life..\n");
 }
 
+/* fix 12: commented out old separate rule functions (replaced with applyRules
 void survivalRule(char life[][20]) // fix 4: removed unused parameters
 {
       int row, col;
-      int neighbors = 0;
       for(row = 1; row<19; row++)
       {
          for(col = 1; col<19; col++)
          {
             if(life[row][col]== '*') // fix 3: removed & and changed string to char comparison
             {
+               int neighbors =; // fix 10: the neighbors variable is never reset to 0 for each cell
                if(life[row - 1][col - 1] == '*')
                   ++neighbors;
                if(life[row - 1][col] == '*')
@@ -64,6 +65,10 @@ void survivalRule(char life[][20]) // fix 4: removed unused parameters
                if(neighbors == 2 || neighbors == 3)
                {
                   life[row][col] = '*'; // fix 2: changed == to = for assignment
+               }
+               else
+               {
+                   life[row][col] = ' ' // fix 11: added death condition for cells with wrong neighbor count
                }
             }
          }
@@ -106,7 +111,51 @@ void birthRule(char life[][20]) // fix 4: removed unused parameters
       }
       return;
 }
+*/
 
+void applyRules(char life[][20]) // fix 12: merged rules and added grid copy to prevent concurrent modification
+{
+    char copy[20][20];
+    int row, col;
+
+    for(row = 0; row < 20; row++) {
+        for(col = 0; col < 20; col++) {
+            copy[row][col] = life[row][col];
+        }
+    }
+
+    for(row = 1; row < 19; row++) {
+        for(col = 1; col < 19; col++) {
+            int neighbors = 0;
+
+            if(copy[row - 1][col - 1] == '*') neighbors++;
+            if(copy[row - 1][col] == '*') neighbors++;
+            if(copy[row - 1][col + 1] == '*') neighbors++;
+            if(copy[row][col - 1] == '*') neighbors++;
+            if(copy[row][col + 1] == '*') neighbors++;
+            if(copy[row + 1][col - 1] == '*') neighbors++;
+            if(copy[row + 1][col] == '*') neighbors++;
+            if(copy[row + 1][col + 1] == '*') neighbors++;
+
+            // rules
+            if(copy[row][col] == '*') {
+                // survival
+                if(neighbors == 2 || neighbors == 3) {
+                    life[row][col] = '*';
+                } else {
+                    life[row][col] = ' '; // death
+                }
+            } else {
+                // birth
+                if(neighbors == 3) {
+                    life[row][col] = '*';
+                } else {
+                    life[row][col] = ' ';
+                }
+            }
+        }
+    }
+}
 
 int main(int argc, char *args[])
 {
@@ -131,7 +180,11 @@ int main(int argc, char *args[])
           row %= 20;
           col = rand();
           col %= 20;
-          life[row][col] = '*'; // fix 2: changed == to = for assignment
+          if (life[row][col] != '*') {
+              life[row][col] = '*'; // fix 2: changed == to = for assignment
+          } else {
+              i--;
+          } // fix 9: added collision detection to avoid overwriting organisms
       }
 
       for(row = 0; row<20; row++)
@@ -153,8 +206,9 @@ int main(int argc, char *args[])
       }
 
       while ( count < 50 ) { // fix 5: stop after 50 generations
-          birthRule(life); // fix 7: removed arguments to match function signature
-          survivalRule(life); // fix 7: removed arguments to match function signature
+          // birthRule(life); // fix 7: removed arguments to match function signature
+          // survivalRule(life); // fix 7: removed arguments to match function signature
+          applyRules(life); // fix 12: use merged function with grid copy
           for(row = 0; row<20; row++)
           {
               for(col = 0; col<20; col++)
