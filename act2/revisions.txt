@@ -1,3 +1,15 @@
+commit b54915e45be29c3efbc1acd4ec8d0f4e6692b7b5
+Author: Olivier Charles Couthaud <occ4548@rit.edu>
+Date:   Fri Sep 19 23:33:21 2025 -0400
+
+    fixed spaces and tabs (there's a few 1 space parts but idc tbh)
+
+commit c047ee5c5f6f600ffd09d3b7e95fdec734c4fd85
+Author: Olivier Charles Couthaud <occ4548@rit.edu>
+Date:   Fri Sep 19 22:24:02 2025 -0400
+
+    added revisions.txt updated
+
 commit 6487a3f92191a6737290eb058b10b1e6ea10dfc6
 Author: Olivier Charles Couthaud <occ4548@rit.edu>
 Date:   Fri Sep 19 22:23:37 2025 -0400
