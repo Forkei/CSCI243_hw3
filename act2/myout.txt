@@ -20,6 +20,9 @@
  ** *    **          
 *     *      ** ** * 
         **  * ***  * 
+
+generation: 0
+
 *       *  *     * * 
 * ****     *** ***   
   * ***       ***    
@@ -41,7 +44,8 @@
 **      * *  ** **** 
  *     **     *   ** 
 
-generation: 0
+generation: 1
+
   ***  **  * *** *   
 * *   *    ***   *** 
       *    *     *   
@@ -63,7 +67,8 @@ generation: 0
        ***   *       
  *     **    ****    
 
-generation: 1
+generation: 2
+
 * **  * *  *     * * 
  **  **   ** *   * * 
   **  **  *  *  *    
@@ -85,7 +90,8 @@ generation: 1
        * *  **  *    
   **  *         *    
 
-generation: 2
+generation: 3
+
 *   * *   ***   ** * 
     **   ***    ** * 
 *      *    *        
@@ -107,7 +113,8 @@ generation: 2
        * *  ***** *  
  ***  * *   *   **   
 
-generation: 3
+generation: 4
+
 *** * **    *  *   * 
     ***  *      ** * 
 *   *  ***  *   **** 
@@ -129,7 +136,8 @@ generation: 3
   *    * * *  *** ** 
 **** ** ***   *    * 
 
-generation: 4
+generation: 5
+
           *    **    
     *    *     *     
 *   *  ***           
@@ -151,7 +159,8 @@ generation: 4
   **  **      * ***  
     **   *** ** *    
 
-generation: 5
+generation: 6
+
     **     *    *    
          **    **    
 **  * ** *           
@@ -173,7 +182,8 @@ generation: 5
  *******      * * ** 
    ****  *** **      
 
-generation: 6
+generation: 7
+
    *  *    ** * *    
     * * ***    **    
  *    **           * 
@@ -195,7 +205,8 @@ generation: 6
   *         * *  *   
        *  *****  *   
 
-generation: 7
+generation: 8
+
      ** *     * **   
       * ****   **    
 *    **   *          
@@ -217,7 +228,8 @@ generation: 7
  **** * **       **  
           *   * **   
 
-generation: 8
+generation: 9
+
      ** *  *  *      
         * **   ***   
 **   ** * **       * 
@@ -239,7 +251,8 @@ generation: 8
 **  ** **      *   * 
   *** * *            
 
-generation: 9
+generation: 10
+
    **** * **   **    
 *       *   *  **    
  *   *  * **    * ** 
@@ -261,7 +274,8 @@ generation: 9
 **  **               
 ****    **           
 
-generation: 10
+generation: 11
+
 *  ***  * **   **    
 *     * *   *      * 
 **        **   ** ** 
@@ -283,7 +297,8 @@ generation: 10
        **          * 
 *     *****          
 
-generation: 11
+generation: 12
+
 **  **    **         
     ** *    *    **  
   *      ** *   *    
@@ -305,7 +320,8 @@ generation: 11
                    * 
 *   ***   **       * 
 
-generation: 12
+generation: 13
+
 ** *      * *     *  
  * ****  *  *    *   
    *    *** *   * *  
@@ -327,7 +343,8 @@ generation: 12
      *    *        * 
  *  * *   **       * 
 
-generation: 13
+generation: 14
+
  * *  *  ** *     ** 
 ** * *  *   **   *** 
  *   * *    **  * *  
@@ -349,7 +366,8 @@ generation: 13
      *    **       * 
  ** **   **       ** 
 
-generation: 14
+generation: 15
+
    *  * * * **       
  *   * ***           
  *    *    *  * * *  
@@ -371,7 +389,8 @@ generation: 14
  *  **   ***      ** 
  ******              
 
-generation: 15
+generation: 16
+
  * *    *            
   *  *  ******       
      **** ** ** **   
@@ -393,7 +412,8 @@ generation: 15
  *    *  ***       * 
 **    **    *        
 
-generation: 16
+generation: 17
+
 **    * * *  *       
   * **       **      
      ****    **      
@@ -415,7 +435,8 @@ generation: 16
  *    ****  *    *   
  *    ******         
 
-generation: 17
+generation: 18
+
 ***   * * *****      
  *  *   **  *        
     *   *            
@@ -437,7 +458,8 @@ generation: 17
  *    *    *     **  
  **  *     **        
 
-generation: 18
+generation: 19
+
 *  * * ** *          
 **** *  * * *        
     ** *  ** *       
@@ -459,7 +481,8 @@ generation: 18
 ***  ***  ***     ** 
      ***             
 
-generation: 19
+generation: 20
+
 *  * *  *  *         
 **** *  * * *        
  ******** *  *       
@@ -481,7 +504,8 @@ generation: 19
 **   *  *  *      *  
   *      **          
 
-generation: 20
+generation: 21
+
 *  *    *  *         
 *       * * *        
 *    **** * **       
@@ -503,7 +527,8 @@ generation: 20
 ***   ***  *       * 
 * * *   ****       * 
 
-generation: 21
+generation: 22
+
 *  *   **   *        
 **    * * * **     * 
  * *      * **       
@@ -525,7 +550,8 @@ generation: 21
   ** **     *        
   *        **        
 
-generation: 22
+generation: 23
+
 * *    ***         * 
  *      *          * 
  * **    *  * *      
@@ -547,7 +573,8 @@ generation: 22
  ******   * *        
  ** * **   ***       
 
-generation: 23
+generation: 24
+
   **  *  *  *      * 
  * *   *           * 
 * *    **            
@@ -569,7 +596,8 @@ generation: 23
       **  *   *      
     *    *****       
 
-generation: 24
+generation: 25
+
 * ***   **  **       
  * *  **           * 
 *      **            
@@ -591,7 +619,8 @@ generation: 24
      ****            
    * *****  **       
 
-generation: 25
+generation: 26
+
 **       *  **       
  * ** *  *         * 
 *  *  * *            
@@ -613,7 +642,8 @@ generation: 25
                      
   **        **       
 
-generation: 26
+generation: 27
+
 **  *       **       
  * *** ***         * 
 *    ** **           
@@ -635,7 +665,8 @@ generation: 26
    *              *  
  **         **       
 
-generation: 27
+generation: 28
+
     **  *   **       
  ***   * *         * 
 ***       *  *       
@@ -657,7 +688,8 @@ generation: 27
   *                  
 ****        **       
 
-generation: 28
+generation: 29
+
     *   *   **       
    **   **  **       
 *  *    ***  *       
@@ -679,7 +711,8 @@ generation: 28
   **                 
  ****       **       
 
-generation: 29
+generation: 30
+
      *  ** *  *      
    **  *  **  *      
   ***         *      
@@ -701,7 +734,8 @@ generation: 29
  *  *                
  *  *       **       
 
-generation: 30
+generation: 31
+
    * *  ** *  *      
   *  *  **** ***     
   * *      *  **     
@@ -723,7 +757,8 @@ generation: 30
                      
     **      **       
 
-generation: 31
+generation: 32
+
    * ** *  *   *     
   *  *  *  * *       
   * *    * **   *    
@@ -745,7 +780,8 @@ generation: 31
                      
     **      **       
 
-generation: 32
+generation: 33
+
    *  **   * **      
   *  ***** *         
   * *     ** *       
@@ -767,7 +803,8 @@ generation: 32
              *****   
     ***     *        
 
-generation: 33
+generation: 34
+
    *      ** *       
   * **  ** * **      
   * *****  * *       
@@ -789,7 +826,8 @@ generation: 33
      *       *****   
     ****    *   *    
 
-generation: 34
+generation: 35
+
    *   ***** **      
   *     ** * **      
   *   ***  * *       
@@ -811,7 +849,8 @@ generation: 34
     **       **   *  
     ***    **   **   
 
-generation: 35
+generation: 36
+
    *****      **     
   **  *    *         
   * *      * *       
@@ -833,7 +872,8 @@ generation: 35
     * *     **   **  
    *  **** *   * *   
 
-generation: 36
+generation: 37
+
           *   ***    
   *   **    * *      
   *          *       
@@ -855,7 +895,8 @@ generation: 36
      ** *   *   ***  
    *    *   ** * **  
 
-generation: 37
+generation: 38
+
        *   **   **   
               *      
       **     **      
@@ -877,7 +918,8 @@ generation: 37
        *    **  *  * 
        * * ***    *  
 
-generation: 38
+generation: 39
+
         * **     *   
       **    * **     
       ***    **      
@@ -899,7 +941,8 @@ generation: 38
         *  * *   *** 
       **  *     * *  
 
-generation: 39
+generation: 40
+
         ****   ***   
       *  * ** **     
      *  *   *  *     
@@ -921,7 +964,8 @@ generation: 39
        *        *  * 
        ** * *   *  * 
 
-generation: 40
+generation: 41
+
              **  *   
        *    ***      
      ***   **  *     
@@ -943,7 +987,8 @@ generation: 40
        **      ***   
        *  *       *  
 
-generation: 41
+generation: 42
+
             * *      
        *   *   *     
      *  *  *         
@@ -965,7 +1010,8 @@ generation: 41
        **      *  *  
        **     **  *  
 
-generation: 42
+generation: 43
+
        **    **      
            **        
        ** ***        
@@ -987,7 +1033,8 @@ generation: 42
        **      * *** 
        **    ***     
 
-generation: 43
+generation: 44
+
        **      *     
          **          
        ** *  *       
@@ -1009,7 +1056,8 @@ generation: 43
        **    *   * * 
       *  *   * ** *  
 
-generation: 44
+generation: 45
+
        ** *   ***    
           *          
        ** **         
@@ -1031,7 +1079,8 @@ generation: 44
        **     *  * * 
       *  *     ****  
 
-generation: 45
+generation: 46
+
        ** *   *      
           *    *     
        ** **         
@@ -1053,7 +1102,8 @@ generation: 45
 *      **            
       *  *        *  
 
-generation: 46
+generation: 47
+
        ** *          
           *          
        ** **         
@@ -1075,7 +1125,8 @@ generation: 46
        **          * 
       *  *           
 
-generation: 47
+generation: 48
+
        ** *          
           *          
        ** **         
@@ -1097,26 +1148,5 @@ generation: 47
        **          * 
       *  *           
 
-generation: 48
-       ** *          
-          *          
-       ** **         
-      **   *         
-     ******  ***     
-     *   ** * *      
-**** *     *  *  *   
-* *            * **  
- *** **            * 
- *** **        *  ** 
-** * *     *      *  
-**  **     *      ** 
-      *        * **  
-     * *      ** **  
-     *  *      * *   
-*     **        *    
- *                 * 
-                  ** 
-       **            
-      *  *           
-
 generation: 49
+
