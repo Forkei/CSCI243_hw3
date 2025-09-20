@@ -124,10 +124,11 @@ void applyRules(char life[][20]) // fix 12: merged rules and added grid copy to 
         }
     }
 
-    for(row = 1; row < 19; row++) {
-        for(col = 1; col < 19; col++) {
+    for(row = 0; row < 20; row++) { // fix 13: process all cells including edges
+        for(col = 0; col < 20; col++) { // fix 13: process all cells including edges
             int neighbors = 0;
 
+            /*
             if(copy[row - 1][col - 1] == '*') neighbors++;
             if(copy[row - 1][col] == '*') neighbors++;
             if(copy[row - 1][col + 1] == '*') neighbors++;
@@ -136,7 +137,18 @@ void applyRules(char life[][20]) // fix 12: merged rules and added grid copy to 
             if(copy[row + 1][col - 1] == '*') neighbors++;
             if(copy[row + 1][col] == '*') neighbors++;
             if(copy[row + 1][col + 1] == '*') neighbors++;
-
+            */
+            int r, c;
+            for(int dr = -1; dr <= 1; dr++) {
+                for(int dc = -1; dc <= 1; dc++) {
+                    if(dr == 0 && dc == 0) continue;
+                    r = (row + dr + 20) % 20;  // fix 13: wraparound for rows
+                    c = (col + dc + 20) % 20;  // fix 13: wraparound for columns
+                    if(copy[r][c] == '*') {
+                        neighbors++;
+                    }
+                }
+            }
             // rules
             if(copy[row][col] == '*') {
                 // survival
