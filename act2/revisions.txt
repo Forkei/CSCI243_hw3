@@ -1,0 +1,47 @@
+commit 23a318926307a68e6f2779598482e93bc21e5f5f
+Author: Olivier Charles Couthaud <occ4548@rit.edu>
+Date:   Fri Sep 19 21:39:03 2025 -0400
+
+    Final version: all fixes and refactoring complete
+
+commit 1a7d305f123e8e011228170f6a928c919523ff09
+Author: Olivier Charles Couthaud <occ4548@rit.edu>
+Date:   Fri Sep 19 21:13:18 2025 -0400
+
+    fix 13
+
+commit 0ac30441e9124cdd9c3407c86df233b830048ea7
+Author: Olivier Charles Couthaud <occ4548@rit.edu>
+Date:   Fri Sep 19 21:00:46 2025 -0400
+
+    activity 2, did up to creating applyRules merged function
+
+commit fd733c2bbdd9043253e1d4b911673c7157264968
+Author: Olivier Charles Couthaud <occ4548@rit.edu>
+Date:   Fri Sep 19 20:16:37 2025 -0400
+
+    added revisions.txt
+
+commit 05dcad836646340cbee05d10995900ba2f8c4d36
+Author: Olivier Charles Couthaud <occ4548@rit.edu>
+Date:   Fri Sep 19 20:14:30 2025 -0400
+
+    Finished activity 1 and started activity 2
+
+commit 2abfcf09531ab6b6fc4276b1a30c8b5f97409da3
+Author: Olivier Charles Couthaud <occ4548@rit.edu>
+Date:   Thu Sep 18 23:06:57 2025 -0400
+
+    fix 1
+
+commit 631cb850669d1c469ca622b928006638e2857292
+Author: Olivier Charles Couthaud <occ4548@rit.edu>
+Date:   Thu Sep 18 22:24:24 2025 -0400
+
+    Initial baseline commit of supplied files
+
+commit efba4369439c049616319f79b969010e62c8accd
+Author: Olivier Charles Couthaud <occ4548@rit.edu>
+Date:   Thu Sep 18 22:20:25 2025 -0400
+
+    first commit
